@@ -15,7 +15,7 @@ const fs = require('fs');
  */
 export async function init(router) {
 	router.get('/', jsonParser, (req, res)=>{
-		res.send('nothing to see here');
+		res.send('process plugin is active');
 	});
 	router.get('/exit', jsonParser, (req, res)=>{
 		process.emit('SIGINT');
